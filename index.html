@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Fundamentals - Week 4</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container">
+
+            <h1>JavaScript Fundamentals</h1>
+
+            <p>
+                Week 4 Assignment — Functions, Arrays, Objects,
+                DOM Manipulation & Events
+            </p>
+
+            <span class="student-name">
+                Prepared by: Alisha Naseem
+            </span>
+
+        </div>
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- NAVIGATION -->
+    <!-- ============================= -->
+
+    <nav class="navbar">
+
+        <a href="#functions">Functions</a>
+        <a href="#arrays">Arrays</a>
+        <a href="#objects">Objects</a>
+        <a href="#dom">DOM</a>
+        <a href="#events">Events</a>
+        <a href="#project">Mini Project</a>
+
+    </nav>
+
+
+    <main class="container">
+
+
+        <!-- ============================= -->
+        <!-- INTRODUCTION -->
+        <!-- ============================= -->
+
+        <section class="intro">
+
+            <h2>JavaScript Interactive Learning Dashboard</h2>
+
+            <p>
+                This project demonstrates fundamental JavaScript concepts
+                through practical and interactive examples.
+            </p>
+
+            <div class="feature-box">
+
+                <div>
+                    <strong>6</strong>
+                    <span>Tasks</span>
+                </div>
+
+                <div>
+                    <strong>100</strong>
+                    <span>Total Marks</span>
+                </div>
+
+                <div>
+                    <strong>JS</strong>
+                    <span>Technology</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 1: FUNCTIONS -->
+        <!-- ============================= -->
+
+        <section id="functions" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 1</span>
+
+                <div>
+                    <h2>JavaScript Functions</h2>
+
+                    <p>
+                        Function declarations, parameters, arguments,
+                        return values and arrow functions.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="card-grid">
+
+
+                <!-- Greeting Function -->
+
+                <div class="card">
+
+                    <h3>Greeting Function</h3>
+
+                    <p>
+                        Enter your name to generate a personalized greeting.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="nameInput"
+                        placeholder="Enter your name"
+                    >
+
+                    <button onclick="showGreeting()">
+                        Generate Greeting
+                    </button>
+
+                    <p id="greetingResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Marks Function -->
+
+                <div class="card">
+
+                    <h3>Marks Calculator</h3>
+
+                    <p>
+                        Enter marks obtained and total marks.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="obtainedMarks"
+                        placeholder="Obtained marks"
+                    >
+
+                    <input
+                        type="number"
+                        id="totalMarks"
+                        placeholder="Total marks"
+                    >
+
+                    <button onclick="calculatePercentage()">
+                        Calculate Percentage
+                    </button>
+
+                    <p id="percentageResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Arrow Function -->
+
+                <div class="card">
+
+                    <h3>Arrow Function</h3>
+
+                    <p>
+                        Enter two numbers to calculate their sum.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="numberOne"
+                        placeholder="First number"
+                    >
+
+                    <input
+                        type="number"
+                        id="numberTwo"
+                        placeholder="Second number"
+                    >
+
+                    <button onclick="calculateSum()">
+                        Calculate Sum
+                    </button>
+
+                    <p id="sumResult" class="result"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 2: ARRAYS -->
+        <!-- ============================= -->
+
+        <section id="arrays" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 2</span>
+
+                <div>
+                    <h2>JavaScript Arrays</h2>
+
+                    <p>
+                        Creating, accessing, adding, removing,
+                        updating and iterating through arrays.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Student Names Array</h3>
+
+                <p>
+                    Use the buttons below to perform different
+                    array operations.
+                </p>
+
+
+                <div class="array-display">
+
+                    <strong>Current Students:</strong>
+
+                    <p id="studentArrayDisplay"></p>
+
+                </div>
+
+
+                <div class="button-group">
+
+                    <button onclick="accessStudent()">
+                        Access Element
+                    </button>
+
+                    <button onclick="addStudent()">
+                        Add Student
+                    </button>
+
+                    <button onclick="removeStudent()">
+                        Remove Student
+                    </button>
+
+                    <button onclick="updateStudent()">
+                        Update Student
+                    </button>
+
+                    <button onclick="iterateStudents()">
+                        Iterate Array
+                    </button>
+
+                </div>
+
+
+                <p id="arrayResult" class="result"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 3: OBJECTS -->
+        <!-- ============================= -->
+
+        <section id="objects" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 3</span>
+
+                <div>
+                    <h2>JavaScript Objects</h2>
+
+                    <p>
+                        Working with object properties and values.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="card-grid">
+
+
+                <div class="card">
+
+                    <h3>Student Object</h3>
+
+                    <div id="studentObject"></div>
+
+                    <div class="button-group">
+
+                        <button onclick="updateStudentObject()">
+                            Update
+                        </button>
+
+                        <button onclick="addStudentProperty()">
+                            Add Property
+                        </button>
+
+                        <button onclick="removeStudentProperty()">
+                            Remove Property
+                        </button>
+
+                    </div>
+
+                    <p id="objectResult" class="result"></p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Course Object</h3>
+
+                    <div id="courseObject"></div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Product Object</h3>
+
+                    <div id="productObject"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 4: DOM MANIPULATION -->
+        <!-- ============================= -->
+
+        <section id="dom" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 4</span>
+
+                <div>
+
+                    <h2>DOM Manipulation</h2>
+
+                    <p>
+                        Dynamically changing webpage content,
+                        styles and elements using JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3 id="domTitle">
+                    Original DOM Heading
+                </h3>
+
+                <p id="domText">
+                    This text will be changed using JavaScript.
+                </p>
+
+
+                <div class="button-group">
+
+                    <button onclick="changeDOMText()">
+                        Change Text
+                    </button>
+
+                    <button onclick="changeDOMHTML()">
+                        Change HTML
+                    </button>
+
+                    <button onclick="changeDOMStyle()">
+                        Change Style
+                    </button>
+
+                    <button onclick="addDOMElement()">
+                        Add Element
+                    </button>
+
+                    <button onclick="removeDOMElement()">
+                        Remove Element
+                    </button>
+
+                </div>
+
+
+                <div id="dynamicElements"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 5: EVENTS -->
+        <!-- ============================= -->
+
+        <section id="events" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 5</span>
+
+                <div>
+
+                    <h2>JavaScript Events</h2>
+
+                    <p>
+                        Click, input, change, submit, mouse and
+                        keyboard events.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-grid">
+
+
+                <!-- Click Event -->
+
+                <div class="card">
+
+                    <h3>Click Event</h3>
+
+                    <button id="clickButton">
+                        Click Me
+                    </button>
+
+                    <p id="clickResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Input Event -->
+
+                <div class="card">
+
+                    <h3>Input Event</h3>
+
+                    <input
+                        type="text"
+                        id="liveInput"
+                        placeholder="Type something..."
+                    >
+
+                    <p>
+                        You typed:
+                        <strong id="liveOutput"></strong>
+                    </p>
+
+                </div>
+
+
+                <!-- Change Event -->
+
+                <div class="card">
+
+                    <h3>Change Event</h3>
+
+                    <label for="colorSelect">
+                        Select a learning topic:
+                    </label>
+
+                    <select id="colorSelect">
+
+                        <option value="">
+                            Choose a topic
+                        </option>
+
+                        <option value="Functions">
+                            Functions
+                        </option>
+
+                        <option value="Arrays">
+                            Arrays
+                        </option>
+
+                        <option value="Objects">
+                            Objects
+                        </option>
+
+                        <option value="DOM">
+                            DOM Manipulation
+                        </option>
+
+                    </select>
+
+                    <p id="changeResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Mouse Event -->
+
+                <div class="card">
+
+                    <h3>Mouse Event</h3>
+
+                    <div id="mouseBox">
+                        Move your mouse over me!
+                    </div>
+
+                    <p id="mouseResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Keyboard Event -->
+
+                <div class="card">
+
+                    <h3>Keyboard Event</h3>
+
+                    <input
+                        type="text"
+                        id="keyboardInput"
+                        placeholder="Press a key..."
+                    >
+
+                    <p id="keyboardResult" class="result"></p>
+
+                </div>
+
+
+                <!-- Submit Event -->
+
+                <div class="card">
+
+                    <h3>Submit Event</h3>
+
+                    <form id="eventForm">
+
+                        <input
+                            type="text"
+                            id="eventName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <button type="submit">
+                            Submit
+                        </button>
+
+                    </form>
+
+                    <p id="submitResult" class="result"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TASK 6: MINI PROJECT -->
+        <!-- ============================= -->
+
+        <section id="project" class="task-section">
+
+            <div class="section-heading">
+
+                <span class="task-number">TASK 6</span>
+
+                <div>
+
+                    <h2>Mini Project — Student Record Manager</h2>
+
+                    <p>
+                        A functional student management application
+                        combining functions, arrays, objects,
+                        DOM manipulation and events.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+
+                <div class="project-form">
+
+                    <h3>Add Student Record</h3>
+
+                    <form id="studentForm">
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Student name"
+                            required
+                        >
+
+                        <input
+                            type="number"
+                            id="studentMarks"
+                            placeholder="Marks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                        <select id="studentCourse" required>
+
+                            <option value="">
+                                Select course
+                            </option>
+
+                            <option value="JavaScript">
+                                JavaScript
+                            </option>
+
+                            <option value="HTML & CSS">
+                                HTML & CSS
+                            </option>
+
+                            <option value="Python">
+                                Python
+                            </option>
+
+                            <option value="Database">
+                                Database
+                            </option>
+
+                        </select>
+
+                        <button type="submit">
+                            Add Student
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="search-area">
+
+                    <h3>Search Students</h3>
+
+                    <input
+                        type="text"
+                        id="searchStudent"
+                        placeholder="Search by student name..."
+                    >
+
+                </div>
+
+
+                <div class="statistics">
+
+                    <div class="stat-box">
+
+                        <strong id="totalStudents">
+                            0
+                        </strong>
+
+                        <span>Total Students</span>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <strong id="averageMarks">
+                            0
+                        </strong>
+
+                        <span>Average Marks</span>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <strong id="highestMarks">
+                            0
+                        </strong>
+
+                        <span>Highest Marks</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Course</th>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="studentTableBody">
+
+                            <!-- Student records will appear here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <p id="projectMessage" class="result"></p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer>
+
+        <p>
+            JavaScript Fundamentals — Week 4 Assignment
+        </p>
+
+        <p>
+            Developed by Alisha Naseem
+        </p>
+
+    </footer>
+
+
+    <!-- External JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
